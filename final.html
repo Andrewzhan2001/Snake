@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>final game</title>
+    <link rel="stylesheet" type='text/css' href="final.css">
+
+</head>
+
+<body id='body'>
+    <div><button id='startButton' onclick='initialButton()'>Start again</button></div>
+    <div id='canvasDiv'><canvas id='canvas' width='600' height="600"></canvas></div>
+    <p>
+        <h1 id='score'>Your Score: <span id='score2'>0</span></h1>
+    </p>
+    <script src='final.js'></script>
+    <div id='initialButtonDiv'><button id='initialButton' onclick='initialButton()'>Start the game</button></div>
+    <div id='settingButtonDiv'><button id='settingButton' onclick='settingButton()'>Setting</button></div>
+    <div id='deadText'>
+        <div>you 💀 are 💀 dead</div>
+        <div>Your game time: <span id='minute'>0</span><span> : </span><span id='second'>0</span></div>
+        <div>Your score: <span id='finalScore'>0</span></div>
+    </div>
+    <div id='settingDiv'>
+        <form method='post' name='firstform'>
+            <h1 id='settingTitle'>Choose your body color😀</h1>
+            <div>
+                <span id="radioTextR">red</span><input class="radio" type="radio" name='color' value='red'>
+                <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+                <input class="radio" type="radio" name='color' value='blue'><span id="radioTextB">blue</span>
+            </div>
+            <div id='specialDiv'>
+                <span id="radioTextG">green</span><input class="radio" type="radio" name='color' value='green'>
+                <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+                <input class="radio" type="radio" name='color' value='yellow'><span id="radioTextY">yellow</span>
+            </div>
+            <div>
+                <span id="radioTextO">orange</span><input class="radio" type="radio" name='color' value='orange'>
+                <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+                <input class="radio" type="radio" name='color' value='#9ddcb1'><span id="radioTextOR">original</span>
+            </div>
+            <input type="button" id='submit' onclick='changeBodyColor()' value='update setting'>
+        </form>
+    </div>
+    <div id='returnDiv'><button id='returnButton' onclick='returnToMenu()'>Return to main menu</button></div>
+    <audio src="./music/bgmusic.mp3" controls="controls" preload id="music1" loop hidden> </audio>
+    <audio src="./music/dead.mp3" controls="controls" preload id="music2" hidden> </audio>
+    <audio src="./music/eat.mp3" controls="controls" preload id="music3" hidden> </audio>
+    <audio src="./music/button.wav" controls="controls" preload id="music4" hidden> </audio>
+</body>
+
+</html>
